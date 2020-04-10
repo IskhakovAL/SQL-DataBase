@@ -24,4 +24,4 @@ VALUES
 	 '2020-04-10', 'User518_email@gmail.com');
 
 /* Вывод таблицы Users */
-select * from Users;
+SELECT * FROM Users;
