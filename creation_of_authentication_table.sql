@@ -9,7 +9,9 @@ CREATE TABLE Authentication (
 	date_of_creation TIMESTAMP NOT NULL DEFAULT NOW(),
 	deleted boolean DEFAULT FALSE,
 	PRIMARY KEY (user_id),
-	CONSTRAINT authentication_user_id_fkey FOREIGN KEY (user_id) REFERENCES Users (id)
+	
+	CONSTRAINT authentication_user_id_fkey FOREIGN KEY (user_id) 
+	REFERENCES Users (id) ON DELETE CASCADE
 );
 
 /* Заполнение таблицы Authentication */
