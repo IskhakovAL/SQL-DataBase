@@ -5,7 +5,7 @@ DROP VIEW Users_Privileges;
 CREATE VIEW Users_Privileges AS
 SELECT
 	Users.id as user_id,
-	array_agg(DISTINCT Privileges.id ORDER BY Privileges.id) as user_privileges
+	array_agg(DISTINCT Privileges.id ORDER BY Privileges.id) AS user_privileges
 FROM Users
 LEFT JOIN Users_Roles on Users.id=Users_Roles.user_id
 LEFT JOIN Roles on Users_Roles.role_id=Roles.id
